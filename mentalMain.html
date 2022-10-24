@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="script.js">
+	</script>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: "Lato", sans-serif;
+			font-weight: 100;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 500px;
+			background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/373/original/Untitled_design_%2810%29.png?1618719717");
+		}
+
+		.topnav {
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+			text-align: center;
+			list-style: none;
+			font-family: "Lato", sans-serif;
+			font-weight: 200;
+			margin: 0;
+			padding: 0;
+			white-space: nowrap;
+			overflow: auto;
+			color: #f0e3f4;
+			border: white solid 2px;
+			background-color: #a6b3a4;
+		}
+
+		.topnav a {
+			float: right;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			transition: 300ms ease;
+			font-family: "Lato", sans-serif;
+			margin: 0;
+			letter-spacing: 3px;
+		}
+
+		.topnav a:hover {
+			color: #f0e3f4;
+			border-radius: 30px;
+			border: #f0e3f4 solid 2px;
+			background-color: white;
+		}
+
+		#reset {
+			position: absolute;
+			left: 80px;
+			top: 220px;
+			border: #9cad88 solid 1px;
+			outline: 0;
+			padding: 10px 10px;
+			color: #9cad88;
+			background-color: white;
+			text-align: center;
+			cursor: pointer;
+			width: 15%;
+			padding: 10px 10px;
+			transition: 300ms ease;
+			letter-spacing: 3px;
+			border-radius: 33px;
+			font-size: 16px;
+		}
+
+		h2 {
+			font-family: "Lato", sans-serif;
+			Font-size: 33px;
+			letter-spacing: 3px;
+			font-weight: 100;
+			margin: 0;
+			padding: 0;
+		}
+
+		#reset:hover {
+			color: white;
+			border: #9cad88 solid 1px;
+			background-color: #9cad88;
+		}
+
+		#back:hover {
+			color: white;
+			border: #9cad88 solid 1px;
+			background-color: #9cad88;
+		}
+
+		#back {
+			position: absolute;
+			left: -40px;
+			top: 1400px;
+			border: #9cad88 solid 1px;
+			outline: 0;
+			padding: 10px 20px;
+			color: #9cad88;
+			background-color: white;
+			text-align: center;
+			cursor: pointer;
+			width: 20%;
+			padding: 20px 40px;
+			transition: 300ms ease;
+			letter-spacing: 3px;
+			border-radius: 33px;
+			font-size: 16px;
+		}
+
+
+
+		#logo {
+			position: absolute;
+			float: left;
+			top: 0px;
+		}
+
+		.btn {
+			float: left;
+			display: inline-block;
+			border: none;
+			color: white;
+			padding: 14px 16px;
+			font-size: 17px;
+		}
+
+		#logo1 {
+			position: absolute;
+			float: left;
+			top: 0px;
+		}
+
+		#mentalImage {
+			position: absolute;
+			left: 300px;
+			top: 450px;
+			transition: transform 300ms;
+		}
+
+		#mentalImage2 {
+			position: absolute;
+			left: 700px;
+			top: 450px;
+			transition: transform 300ms;
+		}
+
+		#mentalImage3 {
+			position: absolute;
+			left: 300px;
+			top: 850px;
+			transition: transform 300ms;
+		}
+
+		#mentalImage4 {
+			position: absolute;
+			left: 700px;
+			top: 850px;
+			padding-bottom: 150px;
+			transition: transform 300ms;
+		}
+
+		#mentalImage:hover {
+			transform: scale(1.15);
+			cursor: pointer;
+		}
+
+		#mentalImage2:hover {
+			transform: scale(1.15);
+			cursor: pointer;
+		}
+
+		#mentalImage3:hover {
+			transform: scale(1.15);
+			cursor: pointer;
+		}
+
+		#mentalImage4:hover {
+			transform: scale(1.15);
+			cursor: pointer;
+		}
+
+		#firstLabel {
+			margin-left: 80px;
+		}
+
+		#container {
+			padding-bottom: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>
+		<div class="topnav">
+			<ul>
+				<p onclick="window.location.href='index.html';" style="text-align:center" class="btn"><img src="logo2.png" id="logo" alt="logo1" style="width:100px; height:90px"></p>
+				</ul>
+				<a href="contact.html">Contact Us</a>
+				<a href="resources.html">Additional Resources</a>
+        <a class="journal" href="journal.html"> Journal</a>
+				<a href="selectPage.html">Wellness Center</a>
+				<a class="active" href="index.html">Home</a>
+			</div>
+		</h2>
+<br>
+    <br>
+    <br>
+<h2 id="firstLabel">Mental Health Points: <script>docWrite(pointsKey)</script></h2>
+<br>
+    <br>
+    <br>
+<br>
+    <br>
+  <h2 id="label" style = "text-align:center">Welcome to the Mental Health Page!</h2>
+    <br>
+  <h3 id="label1" style = "font-size: 16px; text-align:center; font-weight: 100; letter-spacing: 2px;">Choose a mental health technique from below and get started!</h3>
+
+<div class="row">
+      	<ul>
+				<p onclick="go2walking()" style="text-align:center" class="btn" id="mentalButton1"><img src="walk.png" id="mentalImage" alt="mental" style="width:350px; length:350px"></p>
+				</ul>
+   <ul>
+				<p onclick="go2guided()" style="text-align:center" class="btn" id="mentalButton"><img src="meditation.png" id="mentalImage2" alt="mental" style="width:350px; length:350px"></p>
+				</ul>
+  </div> 
+  <div class="row">
+   <ul>
+				<p onclick="go2music()" style="text-align:center" class="btn" id="mentalButton3"><img src="music.png" id="mentalImage3" alt="mental" style="width:350px; length:350px"></p>
+				</ul>
+   <ul>
+				<p onclick="go2stretch()" style="text-align:center" class="btn" id="mentalButton4"><img src="stretching.png" id="mentalImage4" alt="mental" style="width:350px; length:350px"></p>
+				</ul>
+  </div> 
+ <button id="reset" onclick="resetKey2()">Reset</button>
+ <div id="padding">
+ <button id = "back" style="margin-left:110px;" type="button" onclick="go2select()">go back</button>
+ </div>
+</body>
+</html>

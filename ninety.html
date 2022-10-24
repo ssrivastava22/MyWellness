@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <script type="text/javascript" src="script.js"></script> 
+	</script>
+		<style>
+body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+      font-weight: 100;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 500px;
+           background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/373/original/Untitled_design_%2810%29.png?1618719717");
+    }
+
+.topnav {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      list-style: none;
+      font-family: "Lato", sans-serif;
+      font-weight: 200;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      overflow: auto;
+      color: #f0e3f4;
+      border: white solid 2px;
+      background-color: #a6b3a4;
+    }
+    .topnav a {
+      float: right;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 300ms ease;
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      letter-spacing: 3px;
+    } 
+    .topnav a:hover {
+      color: #f0e3f4;
+      border-radius: 30px;
+      border: #f0e3f4 solid 2px;
+     background-color: white;
+    }
+			
+
+       h2 {
+        font-family: "Lato", sans-serif;
+        Font-size: 33px;
+        letter-spacing: 3px;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+ 
+   
+  
+    #logo1 {
+     position: absolute;
+      float: left;
+      top: 0px;
+    }
+
+     #start, #start2, #one, #two, #back {
+        font-size: px;
+        text-transform: uppercase;
+        padding: 20px 40px;
+        border-radius: 22px;
+        letter-spacing: 3px;
+        font-family: "Lato", sans-serif;
+        background-color: #c0c8c0;
+        border: #c0c8c0 solid 2px;
+        color: #506e69; 
+        transition: 300ms ease;
+        left: 50%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      #start2:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;
+      }
+
+      #start:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;
+      }
+
+      #one:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;       
+      }
+
+      #two:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;
+                
+      }
+      #back:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;
+                
+      }
+
+      h4.timer, h5.timer {
+        text-align: center;
+        font-size: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 40px
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+      }
+
+
+
+
+			.btn {
+				float: left;
+				display: inline-block;
+				border: none;
+				color: white;
+				font-size: 17px;
+			}
+
+       #timerButton {
+        position: absolute; 
+        left: 700px; 
+        top: 350px; 
+      }
+      #letsNine {
+			margin-left: 80px;
+		}
+    #label {
+      padding: 0 230px;
+    }
+
+    #tockarea {
+      position: absolute; 
+      left: 870px; 
+      top: 610px; 
+    }
+    #myTextAreaback {
+      position: absolute; 
+        left: 900px; 
+        top: 350px; 
+      background-color: white;
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical
+		}
+		</style>
+	</head>
+
+	<body>
+		<h2>
+			<div class="topnav">
+				<ul>
+					<p onclick="window.location.href='index.html';" style="text-align:center" class="btn"><img src="logo2.png" id="logo1" alt="logo1" style="width:100px; height:90px"></p>
+				</ul>
+				<a href="contact.html">Contact Us</a>
+				<a href="resources.html">Additional Resources</a>
+        <a class="journal" href="journal.html"> Journal</a>
+				<a href="selectPage.html">Wellness Center</a>
+				<a class="active" href="index.html">Home</a>
+			</div>
+		</h2>
+<br>
+<br>
+<br>
+
+<h2 id="letsNine">Academic Points: <script>docWrite(key)</script></h2>
+
+<br>
+<br>
+<br>
+    <h2 id="label" style = "text-align:center">Tocks Study Technique!</h2>
+<br>
+<br>
+    <h3 id="label" style="font-size: 16px; text-align:center; font-weight: 100; letter-spacing: 2px; ">The Tocks Study system is a powerful method of studying that is useful in eliminating distractions. Students will study in 45 minute chunks, and will use the notepad feature to write down any distractions/distracting thoughts. That way, you don’t have to “juggle all the other things your brain wants to think about.” At the end of the 45 minute study session, you will earn 2 academic study points!
+</h3>
+
+
+  <div class="container">
+			<form action='/survey/checkout' method='post' enctype="multipart/form-data">
+     
+				<textarea id="tockarea" name="subject" placeholder="List out any distractions you encounter during the study session -- it'll help you stay focused on the task at hand!" style="width: 300px; height:300px; float:right;"></textarea>
+			</form>
+
+
+
+    <section>
+    <div class="timer">
+      <h4 class="timer">45:00</h4>
+    </div>
+  </section>
+
+  <button id="start" onclick="startTimer()">start</button> 
+   <br>
+<button id="one" onclick="stop()">stop</button>
+  <section>
+    <div class="timer">
+      <h5 class="timer">5:00</h5>
+    </div>
+  </section>
+
+<button id="start2" onclick="startTimer2()">start</button> 
+<br>
+<button id="two" onclick="stop1()">stop</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <script> 
+    function startTimer() {
+     countdown(); 
+    
+    }
+
+    function startTimer2() {
+     countdown2(); 
+    
+    }
+
+  function countdown () {
+let timeSecond = 2700;
+const timeH = document.querySelector("h4");
+
+displayTime(timeSecond);
+
+const countDown = setInterval(() => {
+  timeSecond--;
+  displayTime(timeSecond);
+  if (timeSecond == 0 || timeSecond < 1) {
+    endCount();
+    clearInterval(countDown);
+  }
+}, 1000);
+
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timeH.innerHTML = `
+  ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+  `;
+}
+
+function endCount() {
+  alert('Congratulations! You have completed the study session and have earned 2 Academic Points! You have a 5 minute break -- try a mental health challenge to earn more points!');
+
+  increaseKey4Nine(); 
+}
+}
+
+//second timer function 
+
+
+function countdown2 () {
+let timeSecond1 = 300;
+const timeH1 = document.querySelector("h5");
+
+displayTime1(timeSecond1);
+
+const countDown2 = setInterval(() => {
+  timeSecond1--;
+  displayTime1(timeSecond1);
+  if (timeSecond1 == 0 || timeSecond1 < 1) {
+    endCount1();
+    clearInterval(countDown2);
+  }
+}, 1000);
+
+function displayTime1(second) {
+  const min1 = Math.floor(second / 60);
+  const sec1 = Math.floor(second % 60);
+  timeH1.innerHTML = `
+  ${min1 < 10 ? "0" : ""}${min1}:${sec1 < 10 ? "0" : ""}${sec1}
+  `;
+}
+
+function endCount1() {
+  alert('Times Up! Continue studying to earn moer Academic Points and reach your goal, or head back to the Wellness Center to try a different Study or Mental Health Challenge!');
+}
+  }
+
+
+    
+  function stop1() {
+  alert("You have paused the timer. Click 'OK' to resume.");
+clearInterval(countDown2);
+}
+
+function stop() {
+  alert("You have paused the timer. Click 'OK' to resume.");
+clearInterval(countDown);
+
+}
+    
+    
+
+
+    </script> 
+
+  
+ <button id="back" style="margin-left:110px;" type="button" onclick="go2study()">go back</button>
+   
+
+    <br>
+<br>
+<br>
+<br>
+
+
+  
+
+
+
+
+
+
+
+
+	</body>
+</html>

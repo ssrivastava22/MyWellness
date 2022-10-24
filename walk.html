@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <script type="text/javascript" src="script.js"></script> 
+	</script>
+		<style>
+body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+      font-weight: 100;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 500px;
+           background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/373/original/Untitled_design_%2810%29.png?1618719717");
+    }
+.topnav {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      list-style: none;
+      font-family: "Lato", sans-serif;
+      font-weight: 200;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      overflow: auto;
+      color: #f0e3f4;
+      border: white solid 2px;
+      background-color: #a6b3a4;
+    }
+    .topnav a {
+      float: right;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 300ms ease;
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      letter-spacing: 3px;
+    } 
+    .topnav a:hover {
+      color: #f0e3f4;
+      border-radius: 30px;
+      border: #f0e3f4 solid 2px;
+     background-color: white;
+    }
+			.btn {
+				float: left;
+				display: inline-block;
+				border: none;
+				color: white;
+				padding: 14px 16px;
+				font-size: 17px;
+			}
+
+			#logo1 {
+				position: absolute;
+				float: left;
+				top: 0px;
+			}
+       #timerButton {
+        position: absolute; 
+        left: 700px; 
+        top: 350px; 
+      }
+      #start, #complete, #one{
+        font-size: px;
+        text-transform: uppercase;
+        padding: 20px 40px;
+        border-radius: 22px;
+        letter-spacing: 3px;
+        font-family: "Lato", sans-serif;
+        background-color: #c0c8c0;
+        border: #c0c8c0 solid 2px;
+        color: #506e69; 
+        transition: 300ms ease;
+        left: 50%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      #start:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;
+      }
+
+      h2 {
+        font-family: "Lato", sans-serif;
+        Font-size: 33px;
+        letter-spacing: 3px;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1.timer {
+        text-align: center;
+        font-size: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 40px
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+      }
+
+      #one:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;   
+      }
+
+      #complete:hover {
+        background-color: white;
+        border: white solid 2px;
+        color:black;
+        cursor: pointer;        
+      }
+      #letswalk{
+        margin-left:80px;
+      }
+      #label1{
+        padding: 0 230px;
+      }
+
+		</style>
+	</head>
+
+	<body>
+		<h2>
+			<div class="topnav">
+				<ul>
+					<p onclick="window.location.href='index.html';" style="text-align:center" class="btn"><img src="logo2.png" id="logo1" alt="logo1" style="width:100px; height:90px"></p>
+				</ul>
+				<a href="contact.html">Contact Us</a>
+				<a href="resources.html">Additional Resources</a>
+        <a class="journal" href="journal.html"> Journal</a>
+				<a href="selectPage.html">Wellness Center</a>
+				<a class="active" href="index.html">Home</a>
+			</div>
+		</h2>
+<br>
+<br>
+<br>
+
+<h2 id="letswalk">Mental Health Points: <script>docWrite(pointsKey)</script></h2>
+<br>
+<br>
+<br>
+
+
+    <h2 id="label" style = "text-align:center">Go on a walk -- A Mental Wellness Challenge!</h2>
+<br>
+<br>
+    <h3 id="label1" style = "font-size: 16px; text-align:center; font-weight: 100; letter-spacing: 2px;">Go on a walk for 15 minutes and get some fresh air! If you complete the challenge, you will get a Mental Health point!</h3>
+
+
+<section>
+    <div class="container">
+      <h1 class="timer">15:00</h1>
+    </div>
+  </section>
+
+  <button id="start" onclick="startTimer()">start</button> 
+<br>
+  <br>
+
+
+  <script> 
+    function startTimer() {
+     countdown(); 
+    
+    }
+
+
+  function countdown () {
+let timeSecond = 900;
+const timeH = document.querySelector("h1");
+
+displayTime(timeSecond);
+
+const countDown = setInterval(() => {
+  timeSecond--;
+  displayTime(timeSecond);
+  if (timeSecond == 0 || timeSecond < 1) {
+    endCount();
+    clearInterval(countDown);
+  }
+}, 1000);
+
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timeH.innerHTML = `
+  ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+  `;
+}
+
+function endCount() {
+  alert('done');
+  increaseKey4Walk(); 
+}
+  }
+
+
+  function stop() {
+  alert("You have paused the timer. Click 'OK' to resume.");
+clearInterval(countDown);
+
+}
+    
+    
+
+
+    </script> 
+
+
+
+   
+<button id="one" onclick="stop()">stop</button>
+
+
+<br>
+
+
+
+
+<br>
+    <button id="complete" onclick="increaseKey4Walk()">Completed!</button> 
+<br>
+<br>
+<br>
+<br>
+
+ <button id="one" style="margin-left:70px;" type="button" onclick="window.location.href='mentalMain.html';" >go back</button>
+<br>
+<br>
+
+
+
+
+
+
+
+	</body>
+</html>
